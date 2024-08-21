@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+.login-button{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-section{
+    display: flex;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.menu-list{
+    display: flex;
+    list-style-type: none;
+}
+
+.menu-list li{
+    padding: 10px;
+}
+
+.menu-area{
+    display: flex;
+    justify-content: center;
+}
+
+.color-circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
   }
+
+.product-image {
+    width: 400px;
+    height: auto;
+}  
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+  
+.search-icon {
+    position: absolute;
+    left: 10px;
+    font-size: 16px;
+    color: #000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-input {
+    width: 100%;
+    padding: 10px 10px 10px 36px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
