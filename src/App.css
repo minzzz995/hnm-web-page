@@ -2,6 +2,7 @@
     display: flex;
     justify-content: flex-end;
     margin: 20px;
+    cursor: pointer;
 }
 
 .nav-section{
@@ -29,6 +30,7 @@
 .menu-list li {
     padding: 10px;
 }
+
 .color-circle {
     display: inline-block;
     width: 10px;
@@ -36,11 +38,6 @@
     border-radius: 50%;
     margin-right: 5px;
   }
-
-.product-image {
-    width: 400px;
-    height: auto;
-}  
 
 .search-bar {
     position: absolute; 
@@ -64,4 +61,49 @@
     border-radius: 4px;
     box-sizing: border-box; 
     font-size: 16px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 중앙 정렬 */
+    padding: 0 30px; /* 좌우 여백을 더 넓게 설정 */
+}
+
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center; /* 중앙 정렬 */
+}
+
+.product-col {
+    flex: 0 0 calc(25% - 100px); /* 너비를 줄이면서 여백을 포함 */
+    max-width: calc(25% - 40px);
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px; /* 상하좌우 간격 유지 */
+    transition: transform 0.3s ease-in-out; /* 애니메이션 효과 추가 */
+}
+
+.product-col:hover {
+    transform: scale(1.05); /* hover 시 5% 확대 */
+}
+
+.product-image {
+    width: 100%; /* 이미지가 컬럼에 맞게 크기 조정 */
+    height: auto; /* 비율 유지하면서 크기 조정 */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    width: 500px;
+    padding-top: 30px;
+}
+
+.submit-button-wrapper {
+    display: flex;
+    justify-content: center; /* 버튼을 수평 중앙 정렬 */
+    margin-top: 20px; /* 버튼 위쪽 여백 */
 }
