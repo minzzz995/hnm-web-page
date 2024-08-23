@@ -63,6 +63,10 @@
     font-size: 16px;
 }
 
+.container-spacing {
+    margin-top: 20px;
+}
+
 .product-container {
     display: flex;
     flex-wrap: wrap;
@@ -106,4 +110,30 @@
     display: flex;
     justify-content: center; /* 버튼을 수평 중앙 정렬 */
     margin-top: 20px; /* 버튼 위쪽 여백 */
+}
+
+.product-image{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dropdown-toggle {
+    width: 150px; /* 원하는 너비로 설정 */
+}
+
+.dropdown-menu {
+    min-width: 150px; /* 드롭다운 메뉴가 버튼과 동일한 너비를 유지하도록 설정 */
+}
+
+.spacing {
+    margin-bottom: 1rem; /* 원하시는 간격으로 조정하세요 */
+}
+  
+.wide-button {
+    width: 400px;
+}
+  
+.emphasize-text {
+    font-size: 20px; /* 원하는 크기로 조정하세요 */
+    font-weight: bolder;
 }

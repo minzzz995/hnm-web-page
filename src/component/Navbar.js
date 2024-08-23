@@ -23,6 +23,14 @@ const Navbar = () => {
     navigate("/login");
   }
 
+  const search = (event) => {
+    if(event.key === "Enter") {
+      //입력한 검색어를 읽어와서 url를 바꿔줌
+      let keyword = event.target.value;
+      navigate(`/?q=${keyword}`);
+    }
+  };
+
   return (
     <div>
       <div>
@@ -43,7 +51,7 @@ const Navbar = () => {
         <div className="search-bar">
             <FontAwesomeIcon icon={faSearch} className="search-icon" />
             <input 
-                type="text" 
+                type="text" onKeyPress={(event)=>search(event)}
                 className="search-input" 
                 placeholder="검색" 
                 aria-label="검색"
