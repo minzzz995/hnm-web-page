@@ -11,7 +11,7 @@ const ProductAll = () => {
     const getProduct = async () => {
       const searchQuery = query.get('q') || '';
       console.log('Search Query:', searchQuery); // 검색어 확인
-      const url = `http://localhost:5000/products?q=${encodeURIComponent(searchQuery)}`;
+      const url = `https://github.com/minzzz995/hnm-web-page/products?q=${searchQuery}`;
       console.log('Request URL:', url); // 요청 URL 확인
       const response = await fetch(url);
       const data = await response.json();
