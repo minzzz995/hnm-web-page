@@ -13,7 +13,7 @@ const ProductDetail = () => {
   const [selectedSize, setSelectedSize] = useState("사이즈 선택");
 
   const getProductDetail = async () => {
-    let url = `https://github.com/minzzz995/hnm-project-real/products/${id}`;
+    let url = `https://github.com/minzzz995/hnm-web-page/products/${id}`;
     let response = await fetch(url);
     let data = await response.json();
     console.log(data);
