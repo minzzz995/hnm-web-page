@@ -138,69 +138,65 @@
     font-weight: bolder;
 }
 
-/* 모바일 뷰 */
+/* 모바일 뷰에서 사이드 메뉴 스타일 */
 @media (max-width: 768px) {
-    .menu-area {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .menu-list {
-      flex-direction: column;
-      width: 100%;
-      padding: 0;
-    }
-  
-    .menu-list li {
-      padding: 10px 15px;
-      border-bottom: 1px solid #ccc;
-    }
-  
-    .search-bar {
-      position: static;
-      width: 100%;
-      margin: 0;
-      padding: 10px 0;
-    }
-  
-    .search-icon {
-      position: relative;
-      font-size: 18px;
-    }
-  
-    .search-input {
-      width: calc(100% - 36px);
-      margin-left: 36px;
-    }
-  
-    .product-container {
-      padding: 0 15px;
-    }
-  
     .product-col {
-      flex: 0 0 100%; /* 모바일에서 전체 너비 사용 */
-      max-width: 100%;
-      margin: 0 0 20px 0; /* 모바일에서 간격 조정 */
+        flex: 0 0 100%; /* 전체 너비를 차지하도록 설정 */
+        max-width: 100%;
+        margin-bottom: 20px; /* 아래쪽 간격 설정 */
+    }
+
+    .menu-area {
+      display: none; /* 기본적으로 메뉴는 숨겨짐 */
     }
   
-    .product-image img {
-      width: 100%;
-      height: auto;
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px; /* 사이드에서 보이지 않도록 위치 설정 */
+      width: 250px;
+      height: 100%;
+      background-color: #fff;
+      transition: left 0.3s ease-in-out;
+      z-index: 1000;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     }
   
-    .login-container {
-      width: 90%;
+    .side-menu.open {
+      left: 0; /* 메뉴가 열리면 왼쪽에 붙음 */
     }
   
-    .dropdown-toggle {
-      width: 100%; /* 모바일에서 전체 너비 사용 */
+    .side-menu-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
     }
   
-    .dropdown-menu {
-      width: 100%; /* 모바일에서 전체 너비 사용 */
+    .hamburger-icon {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      cursor: pointer;
     }
-  
-    .wide-button {
-      width: 100%; /* 모바일에서 전체 너비 사용 */
+    
+    /* 검색바 모바일 스타일 */
+    .search-bar {
+        position: static;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .search-icon {
+        position: relative;
+        font-size: 18px;
+    }
+
+    .search-input {
+        width: calc(100% - 36px);
+        margin-left: 36px;
     }
   }
