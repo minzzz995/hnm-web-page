@@ -9,12 +9,12 @@ const ProductAll = () => {
     const [query, setQuery] = useSearchParams();
 
     const getProduct = async () => {
-      const searchQuery = query.get('q') || '';
+      let searchQuery = query.get('q') || '';
       console.log('Search Query:', searchQuery); // 검색어 확인
-      const url = `https://github.com/minzzz995/hnm-web-page/products?q=${searchQuery}`;
+      let url = `https://github.com/minzzz995/hnm-web-page/products?q=${searchQuery}`;
       console.log('Request URL:', url); // 요청 URL 확인
-      const response = await fetch(url);
-      const data = await response.json();
+      let response = await fetch(url);      
+      let data = await response.json();
       console.log('Response Data:', data); // 응답 데이터 확인
       setProductList(data);
     };
@@ -28,7 +28,7 @@ const ProductAll = () => {
         <Container className="product-container">
             <Row className="product-row">
                 {productList.map((menu) => (
-                    <Col lg={3} className="product-col">
+                    <Col key={menu.id} lg={3} className="product-col">
                         <ProductCard item={menu} />
                     </Col>
             ))}
