@@ -141,7 +141,8 @@
 /* 모바일 뷰 */
 @media (max-width: 768px) {
     .menu-area {
-        display: none; /* 메뉴를 사이드 메뉴로 변경할 것이므로 숨깁니다 */
+      flex-direction: column;
+      align-items: flex-start;
     }
   
     .menu-list {
@@ -173,18 +174,13 @@
     }
   
     .product-container {
-      padding: 0;
+      padding: 0 15px;
     }
   
-    .product-row {
-        display: flex;
-        flex-direction: column; /* 제품 사진을 세로로 나열합니다 */
-    }
-
     .product-col {
-        flex: 0 0 100%; /* 모바일에서 전체 너비 사용 */
-        max-width: 100%;
-        margin: 0 0 20px 0; /* 모바일에서 간격 조정 */
+      flex: 0 0 100%; /* 모바일에서 전체 너비 사용 */
+      max-width: 100%;
+      margin: 0 0 20px 0; /* 모바일에서 간격 조정 */
     }
   
     .product-image img {
@@ -207,55 +203,4 @@
     .wide-button {
       width: 100%; /* 모바일에서 전체 너비 사용 */
     }
-    .sidebar-menu {
-        display: flex;
-        flex-direction: column;
-        width: 25%; /* 사이드바가 25%를 차지하도록 설정 */
-        background-color: #f8f9fa; /* 사이드바 배경 색상 설정 */
-        position: fixed; /* 사이드바를 고정 위치에 설정 */
-        top: 0;
-        bottom: 0;
-        left: 0;
-        padding: 15px; /* 사이드바 패딩 설정 */
-        overflow-y: auto; /* 사이드바 내용이 넘칠 때 스크롤 가능하게 설정 */
-    }
-
-    .product-image-container {
-        width: 75%; /* 제품 사진이 75%를 차지하도록 설정 */
-        margin-left: 25%; /* 사이드바를 피하기 위해 왼쪽 여백 설정 */
-        padding: 15px; /* 제품 사진 패딩 설정 */
-        box-sizing: border-box; /* 패딩을 포함하여 너비 계산 */
-    }
-
-    /* 사이드 메뉴 항목 스타일 */
-    .sidebar-menu ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .sidebar-menu li {
-        padding: 10px 0;
-        border-bottom: 1px solid #ccc; /* 메뉴 항목 간 경계선 설정 */
-    }
-
-    /* 사이드 메뉴 햄버거 버튼 스타일 */
-    .sidebar-menu-toggle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        font-size: 24px;
-        margin: 10px;
-    }
-
-    /* 모바일에서의 메뉴 버튼 표시 */
-    .menu-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        font-size: 24px;
-        margin: 10px;
-    }
   }
-  
