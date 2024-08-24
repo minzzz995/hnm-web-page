@@ -24,12 +24,12 @@ function App() {
   const [authenticate, setAuthenticate] = useState(false);
 
   useEffect(()=>{
-    console.log("aa",authenticate);
+    console.log("Authentication status:",authenticate);
   },[authenticate]);
 
   return (
     <div>
-      <Navbar />
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path="/" element={<ProductAll/>} />
         <Route path="/login" element={<LoginPage setAuthenticate={setAuthenticate} />} />

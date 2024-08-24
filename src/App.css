@@ -137,3 +137,71 @@
     font-size: 20px; /* 원하는 크기로 조정하세요 */
     font-weight: bolder;
 }
+
+/* 모바일 뷰 */
+@media (max-width: 768px) {
+    .menu-area {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-list {
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+    }
+  
+    .menu-list li {
+      padding: 10px 15px;
+      border-bottom: 1px solid #ccc;
+    }
+  
+    .search-bar {
+      position: static;
+      width: 100%;
+      margin: 0;
+      padding: 10px 0;
+    }
+  
+    .search-icon {
+      position: relative;
+      font-size: 18px;
+    }
+  
+    .search-input {
+      width: calc(100% - 36px);
+      margin-left: 36px;
+    }
+  
+    .product-container {
+      padding: 0 15px;
+    }
+  
+    .product-col {
+      flex: 0 0 100%; /* 모바일에서 전체 너비 사용 */
+      max-width: 100%;
+      margin: 0 0 20px 0; /* 모바일에서 간격 조정 */
+    }
+  
+    .product-image img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .login-container {
+      width: 90%;
+    }
+  
+    .dropdown-toggle {
+      width: 100%; /* 모바일에서 전체 너비 사용 */
+    }
+  
+    .dropdown-menu {
+      width: 100%; /* 모바일에서 전체 너비 사용 */
+    }
+  
+    .wide-button {
+      width: 100%; /* 모바일에서 전체 너비 사용 */
+    }
+  }
+  

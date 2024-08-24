@@ -13,7 +13,7 @@ const ProductDetail = () => {
   const [selectedSize, setSelectedSize] = useState("사이즈 선택");
 
   const getProductDetail = async () => {
-    let url = `http://localhost:5000/products/${id}`;
+    let url = `https://my-json-server.typicode.com/minzzz995/hnm-web-page/products/${id}`;
     let response = await fetch(url);
     let data = await response.json();
     console.log(data);
@@ -28,7 +28,8 @@ const ProductDetail = () => {
     <Container className="container-spacing">
       <Row>
         <Col className='product-image'>
-          <img src={product?.img}/>
+          <img src={product?.img}
+          style={{ width: '100%', height: 'auto' }}/>
         </Col>
         <Col>
           <div className="emphasize-text spacing">{product?.title}</div>
