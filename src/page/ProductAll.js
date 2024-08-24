@@ -11,7 +11,7 @@ const ProductAll = () => {
     const getProduct = async () => {
       let searchQuery = query.get('q') || '';
       console.log('Search Query:', searchQuery); // 검색어 확인
-      let url = `https://github.com/minzzz995/hnm-web-page/products?q=${searchQuery}`;
+      let url = `https://my-json-server.typicode.com/minzzz995/hnm-web-page/products?q=${searchQuery}`;
       console.log('Request URL:', url); // 요청 URL 확인
       let response = await fetch(url);      
       let data = await response.json();
